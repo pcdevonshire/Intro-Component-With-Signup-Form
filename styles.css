@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*, 
+*::after, 
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%);
+    --darkBlue: hsla(249, 10%, 26%, 0.75);
+    --gray: hsl(246, 25%, 77%);
+    --black: #000;
+    --white: #fff;
+    --Poppins: 'Poppins', sans-serif;
+}
+
+::selection {
+    color: var(--red);
+    background-color: var(--white);
+}
+
+body {
+    background-color: var(--red);
+    background-image: url(images/bg-intro-mobile.png);
+    min-height: 100vh;
+    min-width: 375px;
+    max-width: 1980px;
+    overflow-x: hidden;
+    margin: 0 auto;
+    font-family: var(--Poppins);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 350px;
+    padding: 5em 1em 3em 1em;
+    margin: 0 auto 2em auto;
+}
+
+h1 {
+    color: var(--white);
+    text-align: center;
+    font-size: 28px;
+    line-height: 1.25;
+    margin-bottom: 1em;
+}
+
+p {
+    color: var(--white);
+    text-align: center;
+    margin-bottom: 4em;
+}
+
+.form > a {
+    color: var(--white);
+    background-color: var(--blue);
+    display: block;
+    border-radius: 10px;
+    padding: 1.25em 3em;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+form {
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 1.5em;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+input {
+    width: 100%;
+    padding: 1.5em;
+    font-weight: 700;
+    margin-bottom: 1em;
+    border-radius: 5px;
+    border: 1px solid var(--gray);
+    color: var(--darkBlue);
+}
+
+input::placeholder {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--darkBlue);
+    font-family: var(--Poppins);
+}
+
+input:focus {
+    border: 1px solid var(--green);
+    outline: 1px solid var(--green);
+}
+
+form > a {
+    color: var(--white);
+    background-color: var(--green);
+    display: block;
+    border-radius: 5px;
+    padding: 1em 2em;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.tos {
+    color: var(--gray);
+    font-size: 11px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.75;
+}
+
+.tos a {
+    color: var(--red);
+    font-weight: 700;
+    text-align: center;
+}
+
+@media only screen and (min-width: 1200px) {
+
+    body {
+        background-image: url(images/bg-intro-desktop.png);
+        display: grid;
+        place-items: center;
+    }
+
+    .container {
+        max-width: 1250px;
+        padding: 0;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4em;
+    }
+    
+    .info {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        text-align: left;
+        font-size: 50px;
+        line-height: 1.15;
+        margin-bottom: 0.5em;
+    }
+    
+    p {
+        text-align: left;
+        margin-bottom: 0;
+    }
+    
+    .form {
+        max-width: 550px;
+    }
+
+    .form > a {
+        margin-bottom: 1.5em;
+    }
+    
+    form {
+        padding: 2.5em;
+    }
+    
+    input {
+        margin-bottom: 1.5em;
+    }
+    
+    input:last-of-type {
+        margin-bottom: 0.5em;
+    }
+
+    input::placeholder {
+        font-size: 15px;
+        font-weight: 700;
+        color: var(--darkBlue);
+        font-family: var(--Poppins);
+    }
+    
+    input:focus {
+        border: 1px solid var(--green);
+        outline: 1px solid var(--green);
+    }
+    
+    form > a {
+        color: var(--white);
+        background-color: var(--green);
+        display: block;
+        border-radius: 5px;
+        padding: 1em 2em;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        text-align: center;
+    }
+    
+    .tos {
+        color: var(--gray);
+        font-size: 11px;
+        text-align: center;
+        font-weight: 500;
+        line-height: 1.75;
+    }
+    
+    .tos a {
+        color: var(--red);
+        font-weight: 700;
+        text-align: center;
+    }
+
+}
